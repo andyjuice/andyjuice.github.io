@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Andy Ju | Home
+title: JAWAA
 ---
 # JAWAA: Java and Web based Algorithm Animation — A Fall 2018 Project
 
