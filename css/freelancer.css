@@ -132,7 +132,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #18BC9C;
+  color: #FF9F00;
 }
 
 #mainNav .navbar-toggler {
@@ -337,7 +337,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 a {
-  color: #9966cc;
+  color: #9966CC;
 }
 
 a:focus, a:hover, a:active {
