@@ -357,6 +357,11 @@ a:focus, a:hover, a:active {
   background-image: linear-gradient(to bottom right, #F9B81C, #ff8c2c) !important;
 }
 
+#profile{
+  border: 2px solid #EE7600;
+  border-radius: 500px;
+}
+
 .bg-secondary {
   background-color: #7F00FF !important;
 }
