@@ -415,6 +415,11 @@ a:focus, a:hover, a:active {
   /* background-image: linear-gradient(to bottom right, #004913, #FF9D26) !important; */
 }
 
+#header.bg-primary {
+  background-image:linear-gradient(#004913, #1db260);
+  /* background-image: linear-gradient(to bottom right, #004913, #FF9D26) !important; */
+}
+
 /* #about.bg-primary{
   background-image: linear-gradient(to bottom right, #F9B81C, #ff8c2c) !important;
 } */
