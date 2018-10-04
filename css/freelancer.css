@@ -18,9 +18,65 @@ h6 {
   font-family: 'Montserrat';
 }
 
+/* MY WORK HERE STARTING NOW */
 #quote {
   font-size: 60 !important;
   font-family: 'Montserrat' !important;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+.container-portfolio {
+    padding: 10px 16px;
+}
+.container-portfolio::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.portfolio-fade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
+.portfolio-fade:hover {
+      opacity: 0.5;
 }
 
 hr.star-light,
@@ -54,15 +110,15 @@ hr.star-light {
 
 hr.star-light:after {
   color: #fff;
-  background-color: #9966CC;
+  background-color: #1db260;
 }
 
 hr.star-dark {
-  border-color: #9966CC;
+  border-color: #1db260;
 }
 
 hr.star-dark:after {
-  color: #9966CC;
+  color: #1db260;
   background-color: white;
 }
 
@@ -129,7 +185,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #FF9F00;
+  color: #1db260;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
@@ -137,7 +193,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #FF9F00;
+  color: #1db260;
 }
 
 #mainNav .navbar-toggler {
@@ -162,11 +218,11 @@ section h2 {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
-    background: #FF9F00;
+    background: #1db260;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
-    background: #FF9F00;
+    background: #1db260;
   }
   #mainNav.navbar-shrink {
     padding-top: 0.5rem;
@@ -333,21 +389,21 @@ form .row:first-child .floating-label-form-group {
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  /*background-color: #2C3E50;*/
-  background-image: linear-gradient(to bottom right, #FF9D26, #FD5A1E);
+  background-color: #1db260;
+  background-image: 004913;
   color: #fff;
 }
 
 .copyright {
-  background-color: #FD5A1E;
+  background-color: #004913;
 }
 
 a {
-  color: #9966CC;
+  color: #004913;
 }
 
 a:focus, a:hover, a:active {
-  color: #FF9F00;
+  color: #1db260;
 }
 
 .btn {
@@ -355,39 +411,39 @@ a:focus, a:hover, a:active {
 }
 
 .bg-primary {
-  /*background-color: #18BC9C !important;*/
-  background-image: linear-gradient(to bottom right, #9966CC, #FF9D26) !important;
+  background-color: #1db260 !important;
+  /* background-image: linear-gradient(to bottom right, #004913, #FF9D26) !important; */
 }
 
-#about.bg-primary{
+/* #about.bg-primary{
   background-image: linear-gradient(to bottom right, #F9B81C, #ff8c2c) !important;
-}
+} */
 
 #profile{
-  border: 2px solid #EE7600;
+  border: 2px solid #004913;
   border-radius: 500px;
 }
 
 .bg-secondary {
-  background-color: #7F00FF !important;
+  background-color: #004913 !important;
 }
 
 .text-primary {
-  color: #ff8c2c !important;
+  color: #004913 !important;
 }
 
 .text-secondary {
-  color: #ff8c2c !important;
+  color: #004913 !important;
 }
 
 .btn-primary {
-  background-color: #FF9F00;
-  border-color: #FF9F00;
+  background-color: #1db260;
+  border-color: #1db260;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #FF9F00;
-  border-color: #FF9F00;
+  background-color: #1db260;
+  border-color: #1db260;
 }
 
 .btn-secondary {
