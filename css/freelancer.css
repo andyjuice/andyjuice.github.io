@@ -18,6 +18,11 @@ h6 {
   font-family: 'Montserrat';
 }
 
+#quote {
+  font-size: 60 !important;
+  font-family: 'Montserrat' !important;
+}
+
 hr.star-light,
 hr.star-dark {
   max-width: 15rem;
@@ -216,11 +221,11 @@ header.masthead h2 {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
-  background-color: rgba(24, 188, 156, 0.9);
+  background-color: #FF9D26
 }
 
 .portfolio .portfolio-item .portfolio-item-caption:hover {
-  opacity: 1;
+  opacity: .9;
 }
 
 .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
@@ -235,6 +240,7 @@ header.masthead h2 {
     margin-bottom: 30px;
   }
 }
+
 
 .portfolio-modal .portfolio-modal-dialog {
   padding: 3rem 1rem;
