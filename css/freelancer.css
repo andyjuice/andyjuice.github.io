@@ -23,7 +23,6 @@ h6 {
   font-size: 60 !important;
   font-family: 'Montserrat' !important;
 }
-
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -403,7 +402,7 @@ a {
 }
 
 a:focus, a:hover, a:active {
-  color: #1db260;
+  color: #ffffff;
 }
 
 .btn {
