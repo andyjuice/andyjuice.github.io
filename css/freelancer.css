@@ -75,7 +75,27 @@ h6 {
    }
 
 .portfolio-fade:hover {
-      opacity: 0.5;
+    opacity: 0.5;
+}
+
+.progress-bar{
+  background: #1db260;
+  /* background-image:linear-gradient(to right, #1db260, #004913); */
+}
+
+.progress{
+  margin-bottom: 12.5%;
+}
+
+#Society.progress-bar{
+  background: #00FF7F;
+}
+
+#Others.progress-bar{
+  background: #004913;
+}
+#skill-buttons{
+  margin-bottom: 3%;
 }
 
 hr.star-light,
@@ -415,8 +435,8 @@ a:focus, a:hover, a:active {
 }
 
 #header.bg-primary {
-  background-image:linear-gradient(#004913, #1db260);
-  /* background-image: linear-gradient(to bottom right, #004913, #FF9D26) !important; */
+  background-color: #1db260;
+  /* background-image:linear-gradient(#004913, #1db260); */
 }
 
 /* #about.bg-primary{
