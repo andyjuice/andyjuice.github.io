@@ -386,6 +386,16 @@
         <div class="col-lg-8 mx-auto">
           <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
           <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+          <form action="http://formspree.io/andyju99@gmail.com" method="POST">
+            <input name="name" placeholder="Name">
+            <input type="email" name="_replyto" placeholder="Email Address">
+            <input type="tel" name="phone" placeholder="Phone Number">
+            <textarea name="body" placeholder="Message"></textarea>
+            <input class="btn btn-primary btn-xl" type="submit" value="Send">
+          </form>
+
+
+
           <form name="sentMessage" id="contactForm" novalidate="novalidate">
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
