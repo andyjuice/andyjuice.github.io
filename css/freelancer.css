@@ -421,6 +421,10 @@ a {
   color: #004913;
 }
 
+a.close-button:hover{
+  color: #1db260;
+}
+
 a:focus, a:hover, a:active {
   color: #ffffff;
 }
