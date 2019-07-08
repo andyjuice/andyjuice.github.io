@@ -1,7 +1,7 @@
 a{
     font-family: 'DM Serif Display', serif;
-    text-decoration: underline black;
-    color: black
+    /* text-decoration: underline black; */
+    color: black;
 }
 
 p{
@@ -9,7 +9,7 @@ p{
     color: black
 }
 a:hover{
-    text-decoration: underline grey;
+    /* text-decoration: underline grey; */
     color: lightslategrey
 }
 
