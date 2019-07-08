@@ -2,18 +2,51 @@
 <html lang="en">
 
 <head>
-    <title>Andy Ju</title>
+    <title>Andy Juice</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body class="container imageDiv" style="background-color: #DEEBFF">
+    <script>
+        $(document).ready(function () {
+            $('div.text-center').css('display', 'none');
+            $('div.text-center').fadeIn(1500);
+            $('div.linkList').css('display', 'none');
+            $('div.linkList').fadeIn(2500);
+        });
+    </script>
 
-
+    <div class="text-center">
+        <a href="assets/jumping.gif" target="_blank">
+            <img src="assets/logo.png" class="img-responsive juiceBox" alt="responsive juice box image" />
+        </a>
+    </div>
+    <!-- <hr style="border: 1px solid lightgrey; width: 20%;" /> -->
+    <div class="text-center linkList">
+        <a href="">About Me</a>
+        <br>
+        <a href="cv/andyJuResume.pdf" target="_blank" alt="cv">Resume in Tech</a>
+        <br>
+        <a href="cv/andyJuResume_arts.pdf" target="_blank" alt="cv arts">Resume in the Humanities</a>
+        <br>
+        <a href="https://www.youtube.com/channel/UC8k1b1ypLta1k30DGqRc9cQ?view_as=subscriber" target="_blank"
+            alt="yt channel">Moving Image</a>
+        <br>
+        <a href="https://ndjuice.carbonmade.com/" target="_blank" alt="design portfolio">Some Designs</a>
+    </div>
+    <div class="text-center">
+        <p>Hi I'm Andy and I like having fun.</p>
+        <br>
+        <p></p>
+    </div>
 </body>
 
 </html>
