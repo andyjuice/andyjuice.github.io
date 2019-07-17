@@ -31,3 +31,7 @@ a:hover{
 .imageDiv{
     max-height:50%;
 }
+
+.startHidden{
+    display: none;
+}

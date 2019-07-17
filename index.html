@@ -17,10 +17,16 @@
 <body class="container imageDiv" style="background-color: #DEEBFF">
     <script>
         $(document).ready(function () {
+            $('#aboutText').hide();
             $('div.text-center').css('display', 'none');
             $('div.text-center').fadeIn(1500);
             $('div.linkList').css('display', 'none');
             $('div.linkList').fadeIn(2500);
+            $(document).on("click", "#aboutLink", function (e) {
+                console.log("show hidden");
+                $('#aboutText').slideToggle();
+                return false;
+            });
         });
     </script>
 
@@ -32,7 +38,10 @@
     <!-- <hr style="border: 1px solid lightgrey; width: 20%;" /> -->
     <div class="text-center linkList">
         <div style="display:block;">
-            <a href="">About Me</a>
+            <a id="aboutLink" href="">About Me</a>
+            <div id="aboutText" class="startHidden">
+                <p>still working</p>
+            </div>
             <br>
             <a href="cv/andyJuResume.pdf" target="_blank" alt="cv">Resume in Technology</a>
             <br>
@@ -43,11 +52,6 @@
             <br>
             <a href="https://ndjuice.carbonmade.com/" target="_blank" alt="design portfolio">A Few Designs</a>
         </div>
-    </div>
-    <div class="text-center">
-        <h1>Hi I'm Andy and I like having fun.</h1>
-        <br>
-        <p></p>
     </div>
 </body>
 
