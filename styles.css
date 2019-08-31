@@ -1,11 +1,13 @@
 a{
-    font-family: 'DM Serif Display', serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
     /* text-decoration: underline black; */
     color: black;
 }
 
 p{
-    font-family: 'DM Serif Display', serif;
+    font-family: 'Open Sans', sans-serif;
     color: black
 }
 a:hover{
