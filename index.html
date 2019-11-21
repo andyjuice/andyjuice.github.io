@@ -19,32 +19,35 @@
     <script>
         $(document).ready(function () {
             $('#aboutText').hide();
-            $('div.text-center').css('display', 'none');
-            $('div.text-center').fadeIn(1500);
+            $('div.text-right').css('display', 'none');
+            $('div.text-right').fadeIn(1500);
             $('div.linkList').css('display', 'none');
             $('div.linkList').fadeIn(2500);
             $(document).on("click", "#aboutLink", function (e) {
-                console.log("show hidden");
                 $('#aboutText').slideToggle();
                 return false;
             });
 
-            $('.logo').flip();
+            $(document).on("click", "#logo", function (e){
+                if($("#logo").attr("src") == "assets/logo.png"){
+                    $("#logo").attr("src", "assets/jumping.gif");
+                    $("#logo").css("padding-top", "10%");
+                }else{
+                    $("#logo").attr("src", "assets/logo.png");
+                    $("#logo").css("padding-top", "0px");
+                }
+            });
 
         });
     </script>
 
-    <div class="text-center logo" style="padding-top:10px; padding-bottom:25px;">
-        <div class="front">
-            <img src="assets/logo.png" class="juiceBox" alt="responsive juice box image" />
-        </div>
-        <div class="back">
-            <img src="assets/jumping.gif" class="juiceBox"/>
-        </div>
+    <div class="text-right" style="padding-top:10px; padding-bottom:25px; max-height: 300px">
+        
+        <img src="assets/logo.png" id="logo" class="juiceBox" alt="responsive juice box image"/>
     </div>
     <!-- <hr style="border: 1px solid lightgrey; width: 20%;" /> -->
-    <div class="text-center linkList">
-        <div style="display:block; padding-top:50px;">
+    <div class="text-left linkList">
+        <div style="display:block; padding-top:50px; padding-bottom: 50px;">
             <a id="aboutLink" href="">About Me</a>
             <div id="aboutText" class="startHidden">
             <br>
@@ -57,14 +60,14 @@
             </p>
             </div>
             <br>
-            <a href="cv/andyJuResume.pdf" target="_blank" alt="cv">Resume in Technology</a>
+            <a href="cv/AndyJu_Resume.pdf" target="_blank" alt="cv">Resume in Technology</a>
             <br>
-            <a href="cv/andyJuResume_arts.pdf" target="_blank" alt="cv arts">Resume in Humanities</a>
+            <a href="cv/AndyJu_Resume_Arts.pdf" target="_blank" alt="cv arts">Resume in Humanities</a>
             <br>
             <a href="https://www.youtube.com/channel/UC8k1b1ypLta1k30DGqRc9cQ?view_as=subscriber" target="_blank"
                 alt="yt channel">Moving Image</a>
             <br>
-            <a href="https://ndjuice.carbonmade.com/" target="_blank" alt="design portfolio">A Few Designs</a>
+            <a href="https://ndjuice.carbonmade.com/" target="_blank" alt="design portfolio">My Portfolio</a>
         </div>
     </div>
 </body>
