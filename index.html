@@ -5,71 +5,34 @@
     <title>Andy Juice</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/favicon.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+    <!-- BOOTSTRAP STUFF HERE -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 
-<body class="container imageDiv" style="background-color: #DEEBFF">
-    <script>
-        $(document).ready(function () {
-            $('#aboutText').hide();
-            $('div.text-right').css('display', 'none');
-            $('div.text-right').fadeIn(1500);
-            $('div.linkList').css('display', 'none');
-            $('div.linkList').fadeIn(2500);
-            $(document).on("click", "#aboutLink", function (e) {
-                $('#aboutText').slideToggle();
-                return false;
-            });
-
-            $(document).on("click", "#logo", function (e){
-                if($("#logo").attr("src") == "assets/logo.png"){
-                    $("#logo").attr("src", "assets/jumping.gif");
-                    $("#logo").css("padding-top", "10%");
-                }else{
-                    $("#logo").attr("src", "assets/logo.png");
-                    $("#logo").css("padding-top", "0px");
-                }
-            });
-
-        });
-    </script>
-
-    <div class="text-right" style="padding-top:10px; padding-bottom:25px; max-height: 300px">
-        
-        <img src="assets/logo.png" id="logo" class="juiceBox" alt="responsive juice box image"/>
-    </div>
-    <!-- <hr style="border: 1px solid lightgrey; width: 20%;" /> -->
-    <div class="text-left linkList">
-        <div style="display:block; padding-top:50px; padding-bottom: 50px;">
-            <a id="aboutLink" href="">About Me</a>
-            <div id="aboutText" class="startHidden">
-            <br>
-                <p>hello! my name is Andy.
-                <br><br>
-                <p>I code in any language you need me to.<br> I have a healthy relationship with social media.<br>I'm quirky but not ~too~ quirky.
-                <br>I love dogs (and cats).<br>I won't forget your birthday.<br>I love the outdoors!<br>I donate to charity.<br> I am a nice guy. 
-                <br><br>
-                <b>Please hire me.</b>
-            </p>
+<body style="background-color: #ECECEC;">
+        <div class="row-height row mt-5 pl-5 pr-5">  
+            <div class="col-md non-logo"> Info Title </div>
+            <div class="col-md text-right">
+                <img src="assets/juicebox v2/juicebox-crop.gif" id="juicebox" alt="responsive juice box gif"/>
             </div>
-            <br>
-            <a href="cv/AndyJu_Resume.pdf" target="_blank" alt="cv">Resume in Technology</a>
-            <br>
-            <a href="cv/AndyJu_Resume_Arts.pdf" target="_blank" alt="cv arts">Resume in Humanities</a>
-            <br>
-            <a href="https://www.youtube.com/channel/UC8k1b1ypLta1k30DGqRc9cQ?view_as=subscriber" target="_blank"
-                alt="yt channel">Moving Image</a>
-            <br>
-            <a href="https://ndjuice.carbonmade.com/" target="_blank" alt="design portfolio">My Portfolio</a>
+            <div class="w-100"></div>
+            <div class="col-md non-logo row-two">
+                <ul class="link-list">
+                    <li><a href="">About Me</a></li>
+                    <li><a href="cv/AndyJu_Resume.pdf" target="_blank" alt="cv">Resume in Technology</a></li>
+                    <li><a href="cv/AndyJu_Resume_Arts.pdf" target="_blank" alt="cv arts">Resume in Humanities</a></li>
+                    <li><a href="https://www.youtube.com/andyjuice" target="_blank" alt="yt channel">Moving Image</a></li>
+                    <li><a href="https://ndjuice.carbonmade.com/" target="_blank" alt="design portfolio">My Portfolio</a></li>
+                </ul>
+            </div> 
+            <div class="col-md non-logo row-two"> Info </div>
         </div>
-    </div>
 </body>
 
 </html>

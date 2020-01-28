@@ -1,46 +1,42 @@
-html, body {
-    height:100%;
-    position: relative;
+html,body{
+    height:90%;
 }
 
-@media (max-width: 800px) {
-    #logo{
-        height: 300px;
-    }
+.row-height {
+    height: 50%;
 }
 
-a{
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    /* text-decoration: underline black; */
+.link-list li {
+    list-style-type: none;
+}
+
+.link-list li a {
+    font-family: 'Titillium Web', sans-serif;
     color: black;
+    font-size: 30px;
+    font-weight: 200;
 }
 
-p{
-    font-family: 'Open Sans', sans-serif;
-    color: black
-}
-a:hover{
-    /* text-decoration: underline grey; */
-    color: lightslategrey
+.link-list li a:hover {
+    color: #ffc9a8;
+    text-decoration: line-through;
 }
 
-.juiceBox{
-    max-height: 500px !important;
+.non-logo{
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-.juiceBox:hover{
-    background-color: #DEEBFF;
-    opacity:0.7 !important;
-    filter:alpha(opacity=70) !important;
-    box-shadow: 0 0 0px #000000 !important;
+.col-md:hover{
+    background-color: lightblue;
 }
 
-.imageDiv{
-    max-height:50%;
+.row-two{
+    margin-top: 10px;
 }
 
-.startHidden{
-    display: none;
+/* ID's */
+#juicebox{
+    max-width:25%;    
+    height: auto;
 }
