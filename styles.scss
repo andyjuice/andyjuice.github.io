@@ -1,0 +1,78 @@
+html,
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* HOME PAGE */
+h1 {
+    font-family: "Cooper Black", "Times New Roman", "Palatino Linotype";
+    cursor: pointer;
+    color: #1443d0;
+}
+h1:hover {
+    color: #8cabfa;
+}
+h4 {
+    font-family: "Arial Black", Arial, sans-serif;
+    color: #1b1b1b;
+    transition: color 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+span:hover > h4,
+h4:hover {
+    color: #8cabfa;
+}
+.container {
+    position: absolute;
+    top: 40vh;
+    left: 10vw;
+    z-index: 0;
+}
+.juicebox {
+    position: absolute;
+    top: 20vh;
+    right: 10vw;
+    transform: rotate(10deg);
+    cursor: pointer;
+    z-index: 1;
+}
+.strikethrough {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+.strikethrough:before,
+.strikethrough:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    top: 35%;
+}
+.strikethrough:before {
+    left: -2.5px;
+}
+.strikethrough:after {
+    right: 2.5px;
+    background: #1443d0;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.strikethrough:hover:before {
+    background: #1443d0;
+    width: 105%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.strikethrough:hover:after {
+    background: transparent;
+    width: 105%;
+    transition: 0s;
+}
+
+/* PAGES */
+.about,
+.images,
+.code,
+.cv {
+    display: none;
+}
