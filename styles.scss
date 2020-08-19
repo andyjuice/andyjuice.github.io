@@ -23,19 +23,41 @@ span:hover > h4,
 h4:hover {
     color: #8cabfa;
 }
-.container {
+.container.main {
     position: absolute;
     top: 40vh;
-    left: 10vw;
+    left: 15vw;
     z-index: 0;
 }
 .juicebox {
-    position: absolute;
-    top: 20vh;
-    right: 10vw;
-    transform: rotate(10deg);
+    opacity: 100%;
     cursor: pointer;
-    z-index: 1;
+    position: absolute;
+    transform: rotate(10deg);
+    transition: opacity 0.5s cubic-bezier(0, 0.65, 0.58, 1.01), left 0.5s cubic-bezier(0, 0.65, 0.58, 1.01);
+    z-index: 0;
+}
+@media (max-width: 576px) {
+    .juicebox {
+        opacity: 20%;
+        top: 20vh;
+        left: 15vw;
+    }
+}
+@media (min-width: 577px) and (max-width: 991px) {
+    .juicebox {
+        opacity: 20%;
+        top: 20vh;
+        left: 35vw;
+    }
+}
+@media (min-width: 992px) {
+    .juicebox {
+        opacity: 100%;
+        top: 20vh;
+        left: 55vw;
+        z-index: 1;
+    }
 }
 .strikethrough {
     position: relative;
@@ -75,4 +97,5 @@ h4:hover {
 .code,
 .cv {
     display: none;
+    padding-top: 10vh;
 }

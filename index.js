@@ -4,31 +4,31 @@ const animateFadeOut = (id) =>
         row = $('#' + id);
         row.addClass('animate__animated animate__fadeOutRight');
         function handleAnimationEnd() {
-            row.removeClass('animate__animated animate__fadeOutRight');
             row.unbind('animationend', handleAnimationEnd);
             resolve('Animation ended');
         }
         row.on('animationend', handleAnimationEnd);
     });
 
-const hideClass = (className, callback) => {
-    $('.' + className).fadeOut(1000);
-    if(callback !== null){
-        callback();
-    }
+const hideClass = (className) => {
+    $('.' + className).fadeOut(500);
 }
 
-const showClass = (className, callback) => {
-    $('.' + className).fadeIn(2000);
-    if(callback !== null){
-        callback();
-    }
+const showClass = (className) => {
+    $('.' + className).fadeIn(1000);
 }
 
 const leaveMain = (id) => {
-    animateFadeOut(id).then(hideClass('main', () => {showClass(id, null)}));
+    animateFadeOut(id);
+    hideClass('juicebox');
+    hideClass('main');
+    setTimeout(() => { showClass(id) }, 777);
 }
-
+const returnMain = (id) => {
+    $('#' + id).removeClass('animate__animated animate__fadeOutRight');
+    hideClass(id);
+    setTimeout(() => { showClass('main'); showClass('juicebox'); }, 777)
+}
 const shakeJuiceBox = () => new Promise((resolve, reject) => {
     box = $('.juicebox');
     box.addClass('animate__animated animate__tada');

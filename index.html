@@ -22,25 +22,62 @@
 
 <body style="background-color: #ffea97">
     <script type="text/javascript" src="index.js"></script>
-    <img class="rounded float-right juicebox" alt="juice box" src="assets/juicebox.png" onclick="shakeJuiceBox()"/>
+    <img class="juicebox" alt="juice box" src="assets/juicebox.png" onclick="shakeJuiceBox()" />
     <div class="container main align-items-center">
         <div class="row">
             <h1 class="display-1">Andy Juice</h1>
         </div>
-        <div class="row" id="about" onclick="leaveMain('about')">
-            <span class="strikethrough"><h4>ABOUT ME</h4></span>
+        <div class="row" id="about">
+            <span class="strikethrough" onclick="leaveMain('about')">
+                <h4 onclick="leaveMain('about')">ABOUT ME</h4>
+            </span>
         </div>
-        <div class="row" id="images" onclick="leaveMain('images')">
-            <span class="strikethrough"><h4>IMAGES</h4></span>
+        <div class="row" id="images">
+            <span class="strikethrough" onclick="leaveMain('images')">
+                <h4 onclick="leaveMain('images')">IMAGES</h4>
+            </span>
         </div>
-        <div class="row" id="code" onclick="leaveMain('code')">
-            <span class="strikethrough"><h4>CODE</h4></span>
+        <div class="row" id="code">
+            <span class="strikethrough" onclick="leaveMain('code')">
+                <h4 onclick="leaveMain('code')">CODE</h4>
+            </span>
         </div>
-        <div class="row" id="cv" onclick="leaveMain('cv')">
-            <span class="strikethrough"><h4>CV</h4></span>
+        <div class="row" id="cv">
+            <span class="strikethrough" onclick="leaveMain('cv')">
+                <h4 onclick="leaveMain('cv')">CV</h4>
+            </span>
         </div>
     </div>
-    <div class="container about">About</div>
+    <div class="container about">
+        <div class="row">
+            <div class="col">
+                <h2>Hi, my name is Andy and I'm a fun guy.</h2>
+                <br />
+                <p>I was born in the international metropolis of Shanghai and raised in the sleepy armpit of Silicon
+                    Valley, South San Jose. Like my upbringing, I would like to believe I'm a little bit of all worlds.
+                    At school, I double dip in both the humanities and the sciences with degrees in visual arts
+                    (film) and computer science. While I don't believe a college accredation represents the sum total of
+                    a person's character, I do think these two degrees embody my interest in visual storytelling and a
+                    desire to create.</p>
+                <br />
+                <p>I am driven by two principles: making things look good and building relationships. As I'm typing
+                    this, I am aware that this is beginning to sound like Modelo/Nike ad. However, unlike Phil Knight, I
+                    have limited financial incentive to say this. For me, these principles help concentrate my focus and
+                    direction: I love working on team projects, studying the aesthetics of my favorite commercials, tv
+                    shows, and movies, and dream to own a fried chicken and coffee shop in retirement.</p>
+                <br />
+                <p>See ya soon!</p>
+                <br />
+                <button onclick="returnMain('about')">back</button>
+                <form action="mailto:andyju99@gmail.com" method="GET" style="display: inline">
+                    <button type="submit">contact me</button>
+                </form>
+            </div>
+            <div class="col" style="margin-top: 10vh;">
+                <img class="mx-auto d-block" src="assets/jumping.gif" />
+            </div>
+        </div>
+    </div>
     <div class="container images">Images</div>
     <div class="container code">Code</div>
     <div class="container cv">CV</div>
