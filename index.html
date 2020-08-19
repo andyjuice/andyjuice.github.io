@@ -5,7 +5,7 @@
     <title>Andy Juice</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1">
-    <link rel="icon" href="assets/logo.png">
+    <link rel="icon" href="assets/juice.ico">
     <link rel="stylesheet" href="styles.scss">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -62,8 +62,8 @@
                 <br />
                 <p>I am driven by two principles: making things look good and building relationships. As I'm typing
                     this, I am aware that this is beginning to sound like Modelo/Nike ad. However, unlike Phil Knight, I
-                    have limited financial incentive to say this. For me, these principles help concentrate my focus and
-                    direction: I love working on team projects, studying the aesthetics of my favorite commercials, tv
+                    have limited financial incentive to say this. For me, these principles help inform my direction and
+                    interests: I love working on team projects, studying the aesthetics of my favorite commercials, tv
                     shows, and movies, and dream to own a fried chicken and coffee shop in retirement.</p>
                 <br />
                 <p>See ya soon!</p>
@@ -78,9 +78,80 @@
             </div>
         </div>
     </div>
-    <div class="container images">Images</div>
-    <div class="container code">Code</div>
-    <div class="container cv">CV</div>
+    <div class="container images">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="title-click" onclick="showMovingImages()">Moving</h2>
+            </div>
+            <div class="col text-center">
+                <h2 class="title-click" onclick="showOtherImages()">Other</h2>
+            </div>
+        </div>
+        <div class="row moving-image" style="margin-top: 10vh;">
+            <div class="col text-center">
+                <iframe src="https://www.youtube-nocookie.com/embed/x5x1R8eU6sE" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col text-center">
+                <iframe src="https://www.youtube-nocookie.com/embed/wgYqH-Gv6cg" frameborder="0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col text-center">
+                <iframe src="https://www.youtube-nocookie.com/embed/OL8WNaG2AQ8" frameborder="0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="row moving-image" style="margin-top: 10vh;">
+            <div class="col text-center">
+                <iframe src="https://www.youtube-nocookie.com/embed/OJUAdpyjBCI" frameborder="0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col text-center">
+                <iframe src="https://www.youtube-nocookie.com/embed/zs57bac4ZfQ" frameborder="0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col text-center">
+                <iframe src="https://www.youtube.com/embed/TNLKp7gJOpw" frameborder="0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="row other-image">
+            <div class="col other-image text-center" style="margin-top: 10vh;">
+                <h1 class="other-image" style="color:green">THIS PAGE IS STILL UNDER DEVELOPMENT :'(</h1>
+                <br />
+                <p>To view my current portfolio please visit: <a href="https://ndjuice.carbonmade.com"
+                        target="_blank">https://ndjuice.carbonmade.com</a></p>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 15vh;">
+            <button onclick="returnMain('images')">back</button>
+        </div>
+    </div>
+    <div class="container code">
+    </div>
+    <div class="container cv">
+        <div class="text-center">
+            <h2 class="title">Choose Your Fighter</h2>
+        </div>
+        <div class="row" style="margin-top: 15vh;">
+            <div class="col text-center">
+                <h1 class="cv-emoji"><a class="pdf-link" href="cv/andyJuResume_CS.pdf" target="_blank">💻</a></h1>
+                <p>Software Engineering</p>
+            </div>
+            <div class="col text-center">
+                <h1 class="cv-emoji"><a class="pdf-link" href="cv/andyJuResume_PM.pdf" target="_blank">🏔️</a></h1>
+                <p>Product Management</p>
+            </div>
+            <div class="col text-center">
+                <h1 class="cv-emoji"><a class="pdf-link" href="cv/andyJuResume_ARTS.pdf" target="_blank">📹</a></h1>
+                <p>Film & Creative</p>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 15vh;">
+            <button onclick="returnMain('cv')">back</button>
+        </div>
+    </div>
 </body>
 
 </html>

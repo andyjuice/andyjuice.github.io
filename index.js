@@ -9,7 +9,6 @@ const animateFadeOut = (id) =>
         }
         row.on('animationend', handleAnimationEnd);
     });
-
 const hideClass = (className) => {
     $('.' + className).fadeOut(500);
 }
@@ -17,7 +16,6 @@ const hideClass = (className) => {
 const showClass = (className) => {
     $('.' + className).fadeIn(1000);
 }
-
 const leaveMain = (id) => {
     animateFadeOut(id);
     hideClass('juicebox');
@@ -39,3 +37,11 @@ const shakeJuiceBox = () => new Promise((resolve, reject) => {
     }
     box.on('animationend', handleAnimationEnd);
 });
+const showMovingImages = () => {
+    hideClass('other-image');
+    setTimeout(() => { showClass('moving-image') }, 777);
+}
+const showOtherImages = () => {
+    hideClass('moving-image');
+    setTimeout(() => { showClass('other-image') }, 777);
+}
