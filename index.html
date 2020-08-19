@@ -4,70 +4,152 @@
 <head>
     <title>Andy Juice</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/favicon.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="icon" href="assets/juice.ico">
+    <link rel="stylesheet" href="styles.scss">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
 </head>
 
-<body class="container imageDiv" style="background-color: #DEEBFF">
-    <script>
-        $(document).ready(function () {
-            $('#aboutText').hide();
-            $('div.text-right').css('display', 'none');
-            $('div.text-right').fadeIn(1500);
-            $('div.linkList').css('display', 'none');
-            $('div.linkList').fadeIn(2500);
-            $(document).on("click", "#aboutLink", function (e) {
-                $('#aboutText').slideToggle();
-                return false;
-            });
-
-            $(document).on("click", "#logo", function (e){
-                if($("#logo").attr("src") == "assets/logo.png"){
-                    $("#logo").attr("src", "assets/jumping.gif");
-                    $("#logo").css("padding-top", "10%");
-                }else{
-                    $("#logo").attr("src", "assets/logo.png");
-                    $("#logo").css("padding-top", "0px");
-                }
-            });
-
-        });
-    </script>
-
-    <div class="text-right" style="padding-top:10px; padding-bottom:25px; max-height: 300px">
-        
-        <img src="assets/logo.png" id="logo" class="juiceBox" alt="responsive juice box image"/>
+<body style="background-color: #ffea97">
+    <script type="text/javascript" src="index.js"></script>
+    <img class="juicebox" alt="juice box" src="assets/juicebox.png" onclick="shakeJuiceBox()" />
+    <div class="container main align-items-center">
+        <div class="row">
+            <h1 class="display-1">Andy Juice</h1>
+        </div>
+        <div class="row" id="about">
+            <span class="strikethrough" onclick="leaveMain('about')">
+                <h4 onclick="leaveMain('about')">ABOUT ME</h4>
+            </span>
+        </div>
+        <div class="row" id="images">
+            <span class="strikethrough" onclick="leaveMain('images')">
+                <h4 onclick="leaveMain('images')">IMAGES</h4>
+            </span>
+        </div>
+        <div class="row" id="code">
+            <span class="strikethrough" onclick="leaveMain('code')">
+                <h4 onclick="leaveMain('code')">CODE</h4>
+            </span>
+        </div>
+        <div class="row" id="cv">
+            <span class="strikethrough" onclick="leaveMain('cv')">
+                <h4 onclick="leaveMain('cv')">CV</h4>
+            </span>
+        </div>
     </div>
-    <!-- <hr style="border: 1px solid lightgrey; width: 20%;" /> -->
-    <div class="text-left linkList">
-        <div style="display:block; padding-top:50px; padding-bottom: 50px;">
-            <a id="aboutLink" href="">About Me</a>
-            <div id="aboutText" class="startHidden">
-            <br>
-                <p>hello! my name is Andy.
-                <br><br>
-                <p>I code in any language you need me to.<br> I have a healthy relationship with social media.<br>I'm quirky but not ~too~ quirky.
-                <br>I love dogs (and cats).<br>I won't forget your birthday.<br>I love the outdoors!<br>I donate to charity.<br> I am a nice guy. 
-                <br><br>
-                <b>Please hire me.</b>
-            </p>
+    <div class="container about">
+        <div class="row">
+            <div class="col">
+                <h2>Hi, my name is Andy and I'm a fun guy.</h2>
+                <br />
+                <p>I was born in the international metropolis of Shanghai and raised in the sleepy armpit of Silicon
+                    Valley, South San Jose. Like my upbringing, I would like to believe I'm a little bit of all worlds.
+                    At school, I double dip in both the humanities and the sciences with degrees in visual arts
+                    (film) and computer science. While I don't believe a college accredation represents the sum total of
+                    a person's character, I do think these two degrees embody my interest in visual storytelling and a
+                    desire to create.</p>
+                <br />
+                <p>I am driven by two principles: making things look good and building relationships. As I'm typing
+                    this, I am aware that this is beginning to sound like Modelo/Nike ad. However, unlike Phil Knight, I
+                    have limited financial incentive to say this. For me, these principles help inform my direction and
+                    interests: I love working on team projects, studying the aesthetics of my favorite commercials, tv
+                    shows, and movies, and dream to own a fried chicken and coffee shop in retirement.</p>
+                <br />
+                <p>See ya soon!</p>
+                <br />
+                <button onclick="returnMain('about')">back</button>
+                <form action="mailto:andyju99@gmail.com" method="GET" style="display: inline">
+                    <button type="submit">contact me</button>
+                </form>
             </div>
-            <br>
-            <a href="cv/AndyJu_Resume.pdf" target="_blank" alt="cv">Resume in Technology</a>
-            <br>
-            <a href="cv/AndyJu_Resume_Arts.pdf" target="_blank" alt="cv arts">Resume in Humanities</a>
-            <br>
-            <a href="https://www.youtube.com/channel/UC8k1b1ypLta1k30DGqRc9cQ?view_as=subscriber" target="_blank"
-                alt="yt channel">Moving Image</a>
-            <br>
-            <a href="https://ndjuice.carbonmade.com/" target="_blank" alt="design portfolio">My Portfolio</a>
+            <div class="col" style="margin-top: 10vh;">
+                <img class="mx-auto d-block" src="assets/jumping.gif" />
+            </div>
+        </div>
+    </div>
+    <div class="container images">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="title-click" onclick="showMovingImages()">Moving</h2>
+            </div>
+            <div class="col text-center">
+                <h2 class="title-click" onclick="showOtherImages()">Other</h2>
+            </div>
+        </div>
+        <div class="row moving-image" style="margin-top: 10vh;">
+            <div class="col text-center">
+                <iframe src="https://www.youtube-nocookie.com/embed/x5x1R8eU6sE" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col text-center">
+                <iframe src="https://www.youtube-nocookie.com/embed/wgYqH-Gv6cg" frameborder="0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col text-center">
+                <iframe src="https://www.youtube-nocookie.com/embed/OL8WNaG2AQ8" frameborder="0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="row moving-image" style="margin-top: 10vh;">
+            <div class="col text-center">
+                <iframe src="https://www.youtube-nocookie.com/embed/OJUAdpyjBCI" frameborder="0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col text-center">
+                <iframe src="https://www.youtube-nocookie.com/embed/zs57bac4ZfQ" frameborder="0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col text-center">
+                <iframe src="https://www.youtube.com/embed/TNLKp7gJOpw" frameborder="0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="row other-image">
+            <div class="col other-image text-center" style="margin-top: 10vh;">
+                <h1 class="other-image" style="color:green">THIS PAGE IS STILL UNDER DEVELOPMENT :'(</h1>
+                <br />
+                <p>To view my current portfolio please visit: <a href="https://ndjuice.carbonmade.com"
+                        target="_blank">https://ndjuice.carbonmade.com</a></p>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 15vh;">
+            <button onclick="returnMain('images')">back</button>
+        </div>
+    </div>
+    <div class="container code">
+    </div>
+    <div class="container cv">
+        <div class="text-center">
+            <h2 class="title">Choose Your Fighter</h2>
+        </div>
+        <div class="row" style="margin-top: 15vh;">
+            <div class="col text-center">
+                <h1 class="cv-emoji"><a class="pdf-link" href="cv/andyJuResume_CS.pdf" target="_blank">💻</a></h1>
+                <p>Software Engineering</p>
+            </div>
+            <div class="col text-center">
+                <h1 class="cv-emoji"><a class="pdf-link" href="cv/andyJuResume_PM.pdf" target="_blank">🏔️</a></h1>
+                <p>Product Management</p>
+            </div>
+            <div class="col text-center">
+                <h1 class="cv-emoji"><a class="pdf-link" href="cv/andyJuResume_ARTS.pdf" target="_blank">📹</a></h1>
+                <p>Film & Creative</p>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 15vh;">
+            <button onclick="returnMain('cv')">back</button>
         </div>
     </div>
 </body>
