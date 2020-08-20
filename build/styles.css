@@ -39,6 +39,7 @@ span:hover > h2,
   top: 40vh;
   left: 15vw;
   z-index: 0;
+  transition: left 0.5s cubic-bezier(0, 0.65, 0.58, 1.01);
 }
 
 a {
@@ -46,28 +47,42 @@ a {
 }
 
 .juicebox {
-  opacity: 20%;
+  opacity: 100%;
   position: absolute;
   top: 20vh;
-  left: 40vw;
+  left: 55vw;
   transform: rotate(10deg);
   cursor: pointer;
-  z-index: 0;
   transition: opacity 0.5s cubic-bezier(0, 0.65, 0.58, 1.01), left 0.5s cubic-bezier(0, 0.65, 0.58, 1.01);
 }
 
 @media (max-width: 576px) {
   .juicebox {
-    opacity: 20%;
+    opacity: 10%;
+    top: 20vh;
+    left: 0vw;
+    z-index: 0;
+  }
+}
+@media (min-width: 576px) and (max-width: 1080px) {
+  .juicebox {
+    opacity: 10%;
     top: 20vh;
     left: 25vw;
+    z-index: 0;
+  }
+
+  .container.main {
+    left: 20vw;
+  }
+}
+@media (min-width: 1080px) and (max-width: 1290px) {
+  .container.main {
+    left: 5vw;
   }
 }
 @media (min-width: 1290px) {
   .juicebox {
-    opacity: 100%;
-    top: 20vh;
-    left: 55vw;
     z-index: 1;
   }
 }
