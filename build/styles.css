@@ -7,7 +7,11 @@ body {
 
 @font-face {
   font-family: cooperBlackLocal;
-  src: url("cooper_black_regular.ttf");
+  src: url("build/cooper_black_regular.ttf");
+}
+@font-face {
+  font-family: arialBlackLocal;
+  src: url("build/arial_black.ttf");
 }
 /* HOME PAGE */
 h1 {
@@ -17,7 +21,7 @@ h1 {
 }
 
 h4 {
-  font-family: "Arial Black", Arial, sans-serif;
+  font-family: "Arial Black", arialBlackLocal, Arial, sans-serif;
   color: #1b1b1b;
   transition: color 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
