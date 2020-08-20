@@ -45,3 +45,15 @@ const showOtherImages = () => {
     hideClass('moving-image');
     setTimeout(() => { showClass('other-image') }, 777);
 }
+const toggleProject = (id) => {
+    $('#' + id).slideToggle();
+}
+const play = (id) => {
+    var audio = document.getElementById(id);
+    audio.play();
+}
+const clickTitle = () => {
+    console.log('here');
+    shakeJuiceBox();
+    play('juicebox-slurp');
+}

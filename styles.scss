@@ -11,16 +11,16 @@ h1 {
     cursor: pointer;
     color: #1443d0;
 }
-h1:hover {
-    color: #8cabfa;
-}
 h4 {
     font-family: "Arial Black", Arial, sans-serif;
     color: #1b1b1b;
     transition: color 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
+h1:hover,
+h4:hover,
 span:hover > h4,
-h4:hover {
+span:hover > h2,
+.cs-project-link:hover {
     color: #8cabfa;
 }
 .container.main {
@@ -57,36 +57,53 @@ a {
         z-index: 1;
     }
 }
-.strikethrough {
+.strikethrough,
+.strikethrough-cs-project,
+.strikethrough-image {
     position: relative;
     display: block;
     cursor: pointer;
 }
 .strikethrough:before,
-.strikethrough:after {
+.strikethrough:after,
+.strikethrough-cs-project:before,
+.strikethrough-cs-project:after,
+.strikethrough-image:before,
+.strikethrough-image:after {
     content: "";
     position: absolute;
     width: 0%;
     height: 5px;
-    top: 35%;
 }
-.strikethrough:before {
+.strikethrough:before,
+.strikethrough-cs-project:before,
+.strikethrough-image:before {
     left: -2.5px;
 }
-.strikethrough:after {
+.strikethrough:after,
+.strikethrough-cs-project:after,
+.strikethrough-image:after {
     right: 2.5px;
     background: #1443d0;
     transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-.strikethrough:hover:before {
+.strikethrough:hover:before,
+.strikethrough-cs-project:hover:before,
+.strikethrough-image:hover:before {
     background: #1443d0;
     width: 105%;
     transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-.strikethrough:hover:after {
+.strikethrough:hover:after,
+.strikethrough-cs-project:hover:after,
+.strikethrough-image:hover:after {
     background: transparent;
     width: 105%;
     transition: 0s;
+}
+.strikethrough:before,
+.strikethrough:after {
+    top: 35%;
 }
 
 /* PAGES */
@@ -122,14 +139,39 @@ a {
     -ms-transform: translate(-50%, -50%);
     text-align: center;
 }
-.text-center:hover>.middle {
+.text-center:hover > .middle {
     opacity: 1;
 }
 .title-click:hover {
-    opacity: 50%;
     cursor: pointer;
-    text-decoration: underline;
 }
 .other-image {
     display: none;
+}
+.moving-image {
+    margin-top: 10vh;
+    height: 195px;
+}
+.cs-project-link {
+    cursor: pointer;
+}
+.strikethrough-cs-project:before,
+.strikethrough-cs-project:after {
+    top: 75%;
+}
+.strikethrough-image {
+    display: inline-block;
+}
+.strikethrough-image:before,
+.strikethrough-image:after {
+    top: 90%;
+}
+.subpage-title {
+    color: #8cabfa;
+}
+.subpage-title:hover {
+    color: #1443d0;
+}
+.about-me-title:hover {
+    color: #8cabfa !important;
 }

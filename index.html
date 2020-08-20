@@ -17,15 +17,17 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <link rel="stylesheet" href="build/styles.css">
 
 </head>
 
 <body style="background-color: #ffea97">
-    <img class="juicebox" alt="juice box" src="assets/juicebox.png" onclick="shakeJuiceBox()" />
+    <img class="juicebox" alt="juice box" src="assets/juicebox.png" onclick="clickTitle()" />
     <div class="container main align-items-center">
         <div class="row">
-            <h1 class="display-1">Andy Juice</h1>
+            <h1 class="display-1" onclick="clickTitle()">Andy Juice</h1>
+            <audio id="juicebox-slurp" src="assets/juice-box.mp3"></audio>
         </div>
         <div class="row" id="about">
             <span class="strikethrough" onclick="leaveMain('about')">
@@ -51,7 +53,7 @@
     <div class="container about">
         <div class="row">
             <div class="col">
-                <h2>Hi, my name is Andy and I'm a fun guy.</h2>
+                <h1 class="subpage-title about-me-title">Hi, my name is Andy and I'm a fun guy.</h1>
                 <br />
                 <p>I was born in the international metropolis of Shanghai and raised in the sleepy armpit of Silicon
                     Valley, South San Jose. Like my upbringing, I would like to believe I'm a little bit of all worlds.
@@ -81,38 +83,44 @@
     <div class="container images">
         <div class="row">
             <div class="col text-center">
-                <h2 class="title-click" onclick="showMovingImages()">Moving</h2>
-            </div>
-            <div class="col text-center">
-                <h2 class="title-click" onclick="showOtherImages()">Other</h2>
+                <span class="strikethrough-image" style="margin-right: 7vw;">
+                    <h1 class="title-click subpage-title" onclick="showMovingImages()">Moving</h1>
+                </span>
+                <span class="strikethrough-image" style="margin-left: 7vw;">
+                    <h1 class="title-click subpage-title" onclick="showOtherImages()">Other</h1>
+                </span>
             </div>
         </div>
-        <div class="row moving-image" style="margin-top: 10vh;">
+        <div class="row moving-image">
             <div class="col text-center">
-                <iframe src="https://www.youtube-nocookie.com/embed/x5x1R8eU6sE" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                <iframe height="100%" width="100%" src="https://www.youtube-nocookie.com/embed/x5x1R8eU6sE"
+                    frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
             <div class="col text-center">
-                <iframe src="https://www.youtube-nocookie.com/embed/wgYqH-Gv6cg" frameborder="0"
-                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe height="100%" width="100%" src="https://www.youtube-nocookie.com/embed/wgYqH-Gv6cg"
+                    frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
             <div class="col text-center">
-                <iframe src="https://www.youtube-nocookie.com/embed/OL8WNaG2AQ8" frameborder="0"
-                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe height="100%" width="100%" src="https://www.youtube-nocookie.com/embed/OL8WNaG2AQ8"
+                    frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div>
-        <div class="row moving-image" style="margin-top: 10vh;">
+        <div class="row moving-image">
             <div class="col text-center">
-                <iframe src="https://www.youtube-nocookie.com/embed/OJUAdpyjBCI" frameborder="0"
-                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe height="100%" width="100%" src="https://www.youtube-nocookie.com/embed/OJUAdpyjBCI"
+                    frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
             <div class="col text-center">
-                <iframe src="https://www.youtube-nocookie.com/embed/zs57bac4ZfQ" frameborder="0"
-                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe height="100%" width="100%" src="https://www.youtube-nocookie.com/embed/zs57bac4ZfQ"
+                    frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
             <div class="col text-center">
-                <iframe src="https://www.youtube.com/embed/TNLKp7gJOpw" frameborder="0"
+                <iframe height="100%" width="100%" src="https://www.youtube.com/embed/TNLKp7gJOpw" frameborder="0"
                     allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
@@ -130,16 +138,52 @@
     </div>
     <div class="container code">
         <div class="text-center">
-            <h2 class="title">My Projects</h2>
-            <div class="row">
-                <ol>
-                    <li>Aiso
-                    </li>
-                    <li>Just For Play
-                    </li>
-                    <li>JSAWAA
-                    </li>
-                </ol>
+            <h1 class="title subpage-title" onclick="window.open('https://github.com/andyjuice')">My Projects</h1>
+        </div>
+        <div class="row">
+            <span class="strikethrough-cs-project">
+                <h2 class=" cs-project-link" onclick="toggleProject('aiso')">
+                    1. Aiso
+                </h2>
+            </span>
+            <div id="aiso" style="margin: 15px;">
+                <p>(May 2020 - Present) Aiso (Japanese: 愛想) was a web app (react, python/azure) designed to connect
+                    university alumni with current students seeking housing. A poor man's airbnb with the simplicity
+                    (and lack of third party) of craigslist, we built Aiso with the intent of being a platform of
+                    individuals to connect within their school. Former and current students are able to post and
+                    find listings for roommates, people offering housing, and other housing related needs.
+                </p>
+                <a href="https://github.com/shivamjindal/covid-help" target="_blank">Visit our Repository Here</a>
+            </div>
+        </div>
+        <div class="row">
+            <span class="strikethrough-cs-project">
+                <h2 class="cs-project-link" onclick="toggleProject('just-for-play')">
+                    2. Just for Play
+                </h2>
+            </span>
+            <div id="just-for-play" style="margin: 15px;">
+                <p>(Aug - Dec 2019) Just For Play was a web app (react, flask) designed to connect shared
+                    interest groups at a university together. Designed for CS316, Introduction to Databases,
+                    course.
+                </p>
+                <a href="https://github.com/andyjuice/justforplay-react" target="_blank">Visit our Repository
+                    Here</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <span class="strikethrough-cs-project">
+                <h2 class="cs-project-link" onclick="toggleProject('jsawaa')">
+                    3. JSAWAA
+                </h2>
+            </span>
+            <div id="jsawaa" style="margin: 15px;">
+                <p>(Aug 2018 - May 2019) JSAWAA is a algorithm visualization tool built for Professor Susan Rodger's
+                    course, "Mathematical Foundations of Computer Science". Using a custom scripting language,
+                    students can use the online IDE to visualize algorithms in the form of lines and shapes.
+                </p>
+                <a href="hhttps://github.com/andyjuice/jsawaa" target="_blank">Visit my Repository Here</a>
             </div>
         </div>
         <div class="text-center" style="margin-top: 15vh;">
@@ -148,7 +192,8 @@
     </div>
     <div class="container cv">
         <div class="text-center">
-            <h2 class="title">Choose Your Fighter</h2>
+            <h1 class="title subpage-title" value="PLAY" onclick="play('audio')">Choose Your Fighter</h1>
+            <audio id="audio" src="assets/choose-your-fighter.mp3"></audio>
         </div>
         <div class="row" style="margin-top: 15vh;">
             <div class="col text-center">
