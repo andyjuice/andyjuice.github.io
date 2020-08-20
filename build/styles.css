@@ -5,9 +5,13 @@ body {
   width: 100vw;
 }
 
+@font-face {
+  font-family: cooperBlackLocal;
+  src: url("cooper_black_regular.ttf");
+}
 /* HOME PAGE */
 h1 {
-  font-family: "Cooper Black", "Times New Roman", "Palatino Linotype";
+  font-family: "Cooper Black", cooperBlackLocal, "Arial Black", "Palatino Linotype";
   cursor: pointer;
   color: #1443d0;
 }
