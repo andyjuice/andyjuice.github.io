@@ -57,3 +57,6 @@ const clickTitle = () => {
     shakeJuiceBox();
     play('juicebox-slurp');
 }
+const downloadCV = () = > {
+    window.location.href = '../cv/andyJuResume_PM2025.pdf'
+}
